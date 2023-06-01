@@ -9,12 +9,11 @@ port = 8801
 s.bind((ip, port))
 s.listen()
 print("CONNECTED SUCSSEFULLY")
-# پذیرش اتصال از کلاینت
+# Client Connection
 c,addr = s.accept()
 
 while True:
-    # دریافت پیام از کلاینت
+    # Receive messages from the client
     request = c.recv(1024)
-    # ارسال پیام به کلاینت
+    # Send a message to the client
     c.send(request)
-    print(request)
