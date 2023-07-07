@@ -27,7 +27,7 @@ def send_data(data_size):
         s.send(data)
         
         # Receive a response from the server
-        s.recv(1024)
+        s.recv(data_size)
         
         # End time of receiving the response
         end_time = time.time()
